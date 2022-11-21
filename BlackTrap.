@@ -1,0 +1,13 @@
+local eggName = "Planet Egg" -- Egg Name
+local TripleHatch = false -- Set to the true if haved gamepassed
+local OpenEgg = true -- set to false to stopped
+
+while wait() do
+    if OpenEgg then
+        local Args = {
+            [1] = eggName,
+            [2] = TripleHatch
+        }
+        Workspace.__THINGS.__REMOTES["buy egg"]:InvokeServer(Args)
+    end
+end
